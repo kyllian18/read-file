@@ -10,7 +10,7 @@ namespace readfile
             string tuxFile = "tux.txt";
 
             FileDemo.ReadDemo(tuxFile);
-            Console.WriteLine();
+            FileDemo.OutputSeparator();
 
             // SECOND PART: Write in a file
             string heroesFile = "heroes.txt";
@@ -18,20 +18,24 @@ namespace readfile
 
             FileDemo.WriteDemo(heroesFile, heroes);
             FileDemo.ReadDemo(heroesFile);
-            Console.WriteLine();
+            FileDemo.OutputSeparator();
 
-            // THIRD PART: Separate in different files
+            // THIRD PART: Parse a file
             string dc_heroesFile = "heroes-dc.txt";
-            string[] dc_heroes = { "Batman", "Superman", "Aquaman" };
+            string[] dc_heroes = { "Batman:Bruce Wayne", "Superman:Clark Kent", "Aquaman:Arthur Curry" };
             FileDemo.WriteDemo(dc_heroesFile, dc_heroes);
-            FileDemo.ReadDemo(dc_heroesFile);
-            Console.WriteLine();
+            FileDemo.ReadAndParseString(dc_heroesFile);
+            FileDemo.OutputSeparator();
 
             string marvel_heroesFile = "heroes-marvel.txt";
-            string[] marvel_heroes = { "Spiderman", "The Hulk", "Thanos" };
+            string[] marvel_heroes = { "Spiderman:Peter Parker", "The Hulk:David Banner", "Captain America:Steve Rogers" };
             FileDemo.WriteDemo(marvel_heroesFile, marvel_heroes);
-            FileDemo.ReadDemo(marvel_heroesFile);
-            Console.WriteLine();
+            FileDemo.ReadAndParseString(marvel_heroesFile);
+            FileDemo.OutputSeparator();
+
+            // FOURTH PART: Split a string
+            char[] characters = FileDemo.SplitAString("Supercalifragilisticexpialidocious");
+            Console.WriteLine($"The character at index 10 (position 11) is '{characters[10]}'.");
         }
     }
 }

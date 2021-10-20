@@ -1,3 +1,3 @@
-Spiderman
-The Hulk
-Thanos
+Spiderman:Peter Parker
+The Hulk:David Banner
+Captain America:Steve Rogers
