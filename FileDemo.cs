@@ -5,7 +5,7 @@ namespace readfile
 {
     public class FileDemo
     {
-        public static void ReadDemo(string file, string path = "../..")
+        public static void ReadDemo(string file, string path = "../../TxtFiles")
         {
             string fileToRead = $"{path}/{file}";
 
@@ -29,7 +29,7 @@ namespace readfile
             }
         }
 
-        public static void WriteDemo(string file, string[] content, string path = "../..")
+        public static void WriteDemo(string file, string[] content, string path = "../../TxtFiles")
         {
             string fileToWrite = $"{path}/{file}";
 
@@ -54,7 +54,7 @@ namespace readfile
             }
         }
 
-        public static void ReadAndParseString(string file, string path = "../..")
+        public static void ReadAndParseString(string file, string path = "../../TxtFiles")
         {
             string fileToRead = $"{path}/{file}";
 
